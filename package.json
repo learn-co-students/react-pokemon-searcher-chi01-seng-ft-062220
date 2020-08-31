@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "json-server": "^0.12.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4",
@@ -14,9 +13,13 @@
     "start": "json-server --watch db.json & PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch db.json --port 5000",
+    "dev": "concurrently \"npm start\" \"npm run json-server\""
+
   },
   "devDependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.6.1",
+    "json-server": "^0.16.1"
   }
 }
